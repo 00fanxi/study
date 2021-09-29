@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      #game_mode{
+        border:20px solid black;
+        margin:20px;
+        font-size:50px;
+        font-weight:900;
+        border-radius:20px;
+        color:white;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <input id="game_mode" type="button" value="게임 모드" onclick="
+      if(document.querySelector('input').style.color ==='white'){
+        document.querySelector('input').style.color='black';
+      } else{
+        document.querySelector('input').style.color='white';
+      }
+    ">
+  </body>
+</html>
