@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="html.css">
+  </head>
+  <body>
+    <h1>HTML</h1>
+    <div id=grid>
+      <ol id=list>
+        <li><a href="html.html">html</a></li>
+        <li><a href="css.html">css</a></li>
+        <li><a href="javascript">javascript</a></li>
+      </ol>
+    <div id=contents>
+    <h2>1.Tag의 개념</h2>
+    <ol>
+      <li>태그란 설명하는 것.검색엔진들은 태그를 통해 정보를 얻고 자료를 찾아낸다.<br>
+      h1태그의 경우 높은 우선순위의 정보적 가치를 가진다.</li>
+      <li>태그끼리 포함 및 소속 관계가 있고 Parent/Child태그라 부른다.<br>
+      &lt;parent&gt;<br> &nbsp &nbsp &lt;child&gt;&lt;/child&gt;<br>
+      &lt;/parent&gt;<br>ex)리스트 태그<br>
+      <strong>&lt;ul,ol&gt;<br>&nbsp&nbsp&lt;li&gt;&lt;/li&gt;<br>&lt;/ul,/ol&gt;</strong>
+      </li>
+    </ol>
+
+    <h2>2.Tag의 종류</h2>
+    <ol>
+      <li><strong>&lt;strong&gt;&lt;/strong&gt;</strong>:진한 글씨</li>
+      <li><strong>&lt;u&gt;&lt;/u&gt;</strong>:밑줄 긋기</li>
+      <li><strong>&lt;h1&gt;&lt;/h1&gt;......&lt;h6&gt;&lt;/h6&gt;</strong>:제목</li>
+      <li><strong>&lt;br&gt;</strong>:새로운 줄(닫히는 태그X)<br>
+      *특정 글을 수식하지 않아서
+      영역을 나타낼 필요가 없는 경우 닫는 태그 필요 없음.<br>
+      <strong>&lt;br&gt;&lt;br&gt;&lt;br&gt;</strong>연속 사용 가능.</li>
+      <li><strong>&lt;p&gt;</strong>:단락.디폴트로 정해진 여백이 있음,
+        정보적 가치가 있음. <br>속성(atribute)을 통해 CSS로 제어 가능.
+        ex)<strong>&lt;p style="margin-top:40px;"&gt;</strong>
+        :단락의 위 여백을 40픽셀로 한다.</li>
+      <li><strong>&lt;img src="***.jpg" width="100%"&gt;</strong>
+        :단위가 없으면 픽셀로 인식</li>
+      <li><strong>&lt;ul,ol&gt;&lt;/ul,/ol&gt;</strong>
+        :unordered list,ordered list</li>
+      <li><strong>&lt;li&gt;&lt;/li&gt;</strong>:list</li>
+      <li><strong>&lt;a href="https://html.spec.whatwg.org/multipage/" target
+        ="_blank" title="html5 specification"&gt;&lt;/a&gt;</strong>:<br>a=링크 태그.
+      href=HipertextREFerence, _blank=새로운 창 생성, title=링크에 마우스를 가져가면
+      보이는 이름</li>
+    </ol>
+
+    <h2>3.HTML의 기본 구조</h2>
+    <strong>&lt;!doctype html&gt;</strong>--->관용적으로 쓰임<br>
+    <strong>&lt;html&gt;</strong>--->최상위 태그(이 태그안은 html임을 나타냄)<br>
+    &nbsp&nbsp<strong>&lt;head&gt;</strong>--->상위 태그(html의 구조를 나타냄)<br>
+    &nbsp&nbsp&nbsp&nbsp <strong>&lt;title&gt;&lt;/title&gt;</strong>
+    --->Webpage위에 있는 제목<br>
+    &nbsp&nbsp&nbsp&nbsp <strong>&lt;meta charset="utf-8"&gt;</strong>
+    --->meta는 방법,charset은 규칙을 말하며 utf-8은 언어를 읽는 방식을 말한다.<br>
+    &nbsp&nbsp<strong>&lt;head&gt;</strong><br>
+    &nbsp&nbsp<strong>&lt;body&gt;</strong>--->상위 태그(html의 구조를 나타냄)<br>
+    &nbsp&nbsp&nbsp&nbsp contents<br>
+    &nbsp&nbsp<strong>&lt;/body&gt;</strong><br>
+    <strong>&lt;/html&gt;</strong><br>
+    <h2>4.Tips</h2>
+    <ol>
+      <li>부모자식 관계에서 들여쓰지 않아도 작동하지만 들여쓰는 습관.</li>
+      <li>&lt;!--과--&gt;사이에 있는 코드는 컴퓨터가 무시한다.</li>
+    </ol>
+  </div>
+  </div>
+  </body>
+</html>
