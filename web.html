@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="study.css">
+  </head>
+  <body>
+    <h1>WEB</h1>
+    <div id=grid>
+      <ol id=list>
+        <li><a href="html.html">html</a></li>
+        <li><a href="css.html">css</a></li>
+        <li><a href="javascript.html">javascript</a></li>
+				<li><a href="deeperjs.html">deeperjs</a></li>
+				<li><a href="node.js.html">node.js</a></li>
+        <li><a href="site.html">site</a></li>
+				<li><a href="web.html">web</a></li>
+				<li><a href="wish_list.html">wish list</a></li>
+      </ol>
+    <div id=contents>
+			<h2>
+				1.web의 동작 원리
+			</h2>
+			<ol>
+				<strong>*같은 네트워크 안에서</strong>
+					<span class="picture">
+						<span class="box">
+							<span>Web Browser(IP)</span>
+							<span>index.html(IP)</span>
+						</span>
+						<span class="line">
+							<span>----------></span>
+							<span>request</span>
+							<span>&lt;----------</span>
+							<span>response</span>
+						</span>
+						<span class="box">
+							<span>Web Server</span>
+							<span>index.html(IP)</span>
+						</span>
+					</span>
+			</ol>
+			<h2>
+				2.web 운영
+			</h2>
+			<ol>
+				<li>web hosting(회사에게 대리) vs web server(직접)</li>
+				<li>static web hosting vs dynamic web hosting</li>
+				<li><strong>WEB hosting</strong>
+					<ol>
+						<li style="margin-top:10px;">http://www.bitballoon.com/</li>
+						<li>http://neocities.org/</li>
+						<li>Amazon S3</li>
+						<li>Google Cloud Storage</li>
+						<li>Azure Blob</li>
+					</ol></li>
+				<li><strong>WEB server</strong>
+					<ol>
+						<li style="margin-top:10px;">Apache - open source/free</li>
+						<li>IIS</li>
+						<li>Nginx</li>	
+					</ol></li>
+				<li>How to install Apache http server in (window/linux/mac)<br>
+					1.window<br>
+					BitNami Wamp stack(쉽게 까는법)<br>
+					wamp:Window Apache Mysql Php</li>
+			</ol>
+			<h2>
+				web server 운영
+			</h2>
+			<ol>
+				<li>http://127.0.0.1/index.html<br>
+					<strong>127.0.0.1</strong>:웹브라우저가 설치되있는 자신의 컴퓨터의 웹서버 주소<br>
+					<strong>index.html</strong>:웹서버는 HTDOCS에서 이 파일을 찾아준다(디폴트)
+				</li>
+				<li><strong>http://(HyperTextTransferProtocol) vs file://</strong><br>
+					Hyper Text = web page<br>
+					Transfer = 전송<br>
+					Protocol = 규약, 약속<br>
+					=>web page를 web browser와 web server가 서로 주고받기 위한 약속
+					<strong>http://</strong>(웹서버에서 가져옴)<br>
+					<strong>file://</strong>(디렉토리에서 직접 가져옴)</li>
+			</ol>
+			</div>
+		</div>
+	</body>
+</html>

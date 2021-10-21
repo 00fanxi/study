@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="html.css">
+    <link rel="stylesheet" href="study.css">
   </head>
   <body>
     <h1>JavaScript</h1>
@@ -12,10 +12,310 @@
         <li><a href="html.html">html</a></li>
         <li><a href="css.html">css</a></li>
         <li><a href="javascript.html">javascript</a></li>
+				<li><a href="deeperjs.html">deeperjs</a></li>
+				<li><a href="node.js.html">node.js</a></li>
         <li><a href="site.html">site</a></li>
+				<li><a href="web.html">web</a></li>
+				<li><a href="wish_list.html">wish list</a></li>
       </ol>
     <div id=contents>
+			
+	<!-- 	1.javascript의 개념	 -->
+			
     <h2>1.javascript의 개념</h2>
+			<ol>
+				<li>Web Page가 User와 Dynamic하게 상호작용하게하기 위함</li>
+				<li>Computer Language and Programing Language<br>
+					(program:음악회에서 <strong>시간의 흐름</strong>에 따라 연주되는 음악의 순서)</li>
+			</ol>
+			
+	<!-- 	2.javascript	 -->
+			
+		<h2>2.javascript</h2>
+			<ol>
+				<li>&lt;input type="button" value="night" onclick=<span class="js";>"<br>
+					document.querySelector('body').style.backgroundColor='black';<br>
+					document.querySelector('body').style.color='white';<br>
+					"</span><br>
+					<span class="js";>----&gt;</span>이 부분에 javascript가 와야한다.
+        <li>&lt;script&gt;<br>
+					&nbsp <span class="js">document.write('hello world');</span><br>
+				&lt;/script&gt;</li>
+				<li>event:클릭,변화(onclick,onchange,onkeydown...)<br>
+					<span class="js"> &lt;input type="button" value="hi" onclick="alert('hi')"&gt;<br>
+					&lt;input type="text" onchange="alert('changed')"&gt;<br>
+					&lt;input type="text" onkeydown="alert('key down!')"&gt;</span></li>
+				<li><strong>Console</strong>:해당 Web Page에서 실행.<br>
+					Inspect에서 Elements 클릭 후 ESC = Console창 추가<br>
+					한번 실행했던 코드는 화살표-위 누를시 다시 나타남.<br>
+					실행 유보 시 (Shift + Enter)<br>
+					Console에서 document.querySelector(' ')로 검색 가능<br>
+					Console.log():가로 안에 있는걸 콘솔에서 출력</li>
+				<li>JavaScript에서는 ' '사이가 문자<br>
+					' '.length:문자의 개수</li>
+				<li>Data Type(자료형)<br>
+					1.Number:이항 연산자(+ - * /)<br>
+					2.String:" "or' '<br>
+					3.Boolean: true or false 단 2개로 이루어진 자료형<br>
+					4.Symbol:<br>
+					5.Object:<br>
+					6.Undefined:<br>
+					7.Null:<br></li>
+				<li>String의 Properties<br>
+					<span class="js">' '.length</span>:문자의 길이<br>
+					<span class="js">' '.toUpperCase()</span>:소문자를 대문자로<br>
+					<span class="js">' '.indexOf()</span>:해당 문자가 몇번째부터 시작되는가(-1:없음,0:첫번째)
+					<br><span class="js">' '.trim()</span>:문자 중 공백 없애기</li>
+				<li>Number와 Srting의 덧셈 결과의 차이<br>
+					<span class="js"> 1 + 1 = 2<br>
+					"1" + "1" = "11"</span></li>
+				
+	<!-- 	3.Variable(변수)와 대입/할당 연산자		 -->
+				
+			</ol>
+			<h2>3.Variable(변수)와 대입/할당 연산자</h2>
+			<ol>
+				<li><strong>=</strong> : 좌우항을 결합해서 우항의 값을 만들어낸다. </li>
+				<li>Constant &lt;-&gt; Variable</li>
+				<li>변수 사용시 var을 앞에 붙이는 습관 (이유를 알때까지)<br>
+					<span class="js">var name = 'leezche';</span></li>
+				
+			</ol>
+			
+<!-- 	4.Conditional statements		 -->
+			
+			<h2>
+				4.Conditional statements(조건문)
+			</h2>
+			<ol>
+				<li><strong>Comparison operator</strong>(비교 연산자): <br>
+					== : equal to<br>
+					=== : equal value and equal type<br>
+					!= : not equal<br>
+					!== : not equal value and or not equal type<br>
+					> : greater than<br>
+					&lt; : less than<br>
+					>= : greater than or equal to <br>
+					&lt;= : less than or equal to<br>
+					<strong>좌항과 우항을 결합하여 Boolean data(T/F)를 만드는 이항 연산자</strong><br>
+					1 === 1 은 Number가 아닌 Boolean이다.</li>
+				<li><span class="js">if(boolean){<br>
+					&nbsp document.write("2");<br>
+					} else{<br>
+					&nbsp document.write("3");<br>
+					} </span><br>
+					<strong>Boolean값이 true면 2,false면 3</strong></li>
+					<li>if(<span class="js">여기는 JavaScript</span>)</li>
+			</ol>
+			<h2>5.Refactoring(리팩토링)</h2>
+			<ol>
+				<li>this : 자신<br>
+					<span class="js">document.querySelector('여기가 if가 포함된 태그일 경우')</span></li>
+				<li>중복의 제거<br>
+					<span class="js">var target = document.querySelector('body');</span></li>
+			</ol>
+			<h2>
+				6.Loop(반복문)
+			</h2>
+			<ol>
+				<li>Array(배열):순서가 있는 수납상자<br>
+				<span class="js">var coworkers = ["egoing","leezche"]</span><br>
+					<span class="js">document.write(coworkers[0]);</span> ---> egoing<br>
+					<span class="js">document.write(coworkers.length);</span> ---> 2<br>
+					<span class="js">document.write(coworkers.push("james");</span> ---> 맨 뒤에 추가
+				</li>
+				<li>Loop(반복문)<br>
+					<span class="js">var i = 0<br>
+					while(boolean:1&lt;3){<br>
+					&nbsp i = i+3;<br>
+					}</span></li>
+				<li>Array + Loop<br>
+					<span class="js">var coworkers = ['egoing','leezche','duru','taeho','alex','merry'];<br>
+					var i = 0;<br>
+					while(i&lt;coworkers.length){<br>
+					&nbsp document.write('&lt;a href="html.html'<br>
+					&nbsp + coworkers[i] + '"&gt;' + coworkers + ' &lt;/li&gt;');<br>
+					&nbsp i = i + 1;
+					}</span>
+					</li>
+					<li>document.querySelectorAll(): Nodelist를 출력(태그,태그.클래스 등)</li>
+					<li><span class="js">var mode = document.querySelectorAll('a');<br>
+						var i = 0;<br>
+						while(i&lt;mode.length){<br>
+						&nbsp mode[i].style.color='powderblue';<br>
+						&nbsp i = i + 1;<br>
+						}</span></li>
+			</ol>
+			<h2>
+				7.Function(함수)
+			</h2>
+			<ol>
+				<li><span class="js">function nightDayhandler(){<br>
+				    &nbsp var mode = document.querySelectorAll('a');<br>
+						&nbsp var i = 0;<br>
+						&nbsp while(i&lt;mode.length){<br>
+						&nbsp mode[i].style.color='powderblue';<br>
+						&nbsp i = i + 1;<br>
+						}</span></li>
+				<li><span class="js">&lt;input onclick="<br>
+					&nbsp nightDayHandler(this);<br>
+					"&gt;</span><br>
+					여기서 this란 nightDayHandler 함수가 속한 태그 input</li>
+				<li><strong>this</strong>는 태그 안에 있는 상태에서만 태그 자신을 가리키고<br>
+					만약 <strong>this</strong>를 함수로 만들어 올리면 객체를 가리키게 된다.<br>
+					(Web Browser에서는 Window)<br>
+					따라서,<strong>this</strong>를 다른 <strong>'매개 변수'</strong>로 바꿔주고<br>
+					함수에 <strong>(this)</strong>를 넣어주면, 함수가 실제로 작동할 때,<br>
+					<strong>'매개 변수'</strong>에 <strong>this</strong>를 대입시켜서 계산한다.<br>
+					따라서 <strong>this</strong> = document.querySelector('#night_day')/
+					자신이 속한 tag의 id</li>
+			</ol>
+			<h2>
+				8.Object(객체)
+			</h2>
+			<ol>
+				<li>Programing의 양대산맥:Function vs Object<br>
+				Function의 기반 위에 Object가 존재(심화)</li>
+				<li>서로 연관된 Function과 Variable을 같은 이름으로 Grouping해서 정리하기 위한 도구.</li>
+				<li>document(객체).querySelector()(객체에 속한 함수=Method)</li>
+				<li>Object literal(Object 만들때 사용하는 기호)<br>
+					Object = { } (중가로)</li>
+				<li>Object 만드는 법<br>
+					<span class="js">var coworkers = {<br>
+					&nbsp "programmer" : "egoing",<br>
+					&nbsp "designer" : "leezche"<br>
+				};</span></li>
+				<li>Object 불러오는 법<br>
+					<span class="js">document.write("programmer: " + coworkers.programmer +"&lt;br&gt;");
+					</span></li>
+				<li>Object에 Property 추가하는 법<br>
+					<span class="js">coworkers.bookkeeper = "duru";<br>
+					또는,coworkers["data scientist"] = "taeho";(띄어쓰기 사용가능)</span></li>
+				<li>Object Iterate(반복)<br>
+					<span class="js">&lt;script&gt;<br>
+					&nbsp for(var key in coworkers){<br>
+					&nbsp &nbsp document.write(coworkers[key] + '&lt;br&gt;')<br>
+					}</span><br>
+					coworkers라는 변수가 가지고 있는 키값들을 가져오는 반복문<br>
+					Objcet = key, Array = Index</li>
+				<li>Object에서 Function정의법<br>
+					<span class="js">1.coworkers.showAll = function(){<br>
+					<br>
+					}<br>
+					2.var showAll = function(){<br>
+					<br>
+					}<br>
+					3.function showAll(){<br>
+					<br>
+						}</span>
+				</li>
+				<li>결론<br>
+					1.Object에 소속된 값으로 function 지정 가능.<br>
+					2.Object에 소속된 function을 Method라 하고 
+						Object에 소속된 Variable을 Property라 한다.<br>
+					<span class="js">coworkers.showAll = function(){<br>
+					&nbsp for(fanxi in this){<br>
+					&nbsp &nbsp document.write(fanxi + ':' + this[fanxi] + '&lt;br&gt;');<br>
+					&nbsp }
+					<br>}</span></li>
+			</ol>
+			<h2>
+				9.library
+			</h2>
+			<ol>
+				<li>library: 땡겨오는 것 / Framework: 직접 들어가서 작업</li>
+				<li>jQuery</li>
+				<li>UI(User Interface) / API(Application Programing Interface)</li>
+				
+			</ol>
+			
+<!-- 	10.기타		 -->
+			
+			<h2>
+				탈웹브라우저,탈웹
+			</h2>
+			<ol>
+				<li>웹페이지 스크립팅 - DOM</li>
+				<li>웹서버: node.js</li>
+				<li>Google apps script</li>
+				<li>JavaScript ~('Hello world'); => web browser = alert, node.js = write, SpreadSheet = msgBox<br>
+				언어라는 공통 분모로 다른 환경에서 다른 일들을 할 수 있다. 환경에 따라 언어가 달라진다.<br>
+				따라서 JavaScript의 문법을 아는 상태에서도 각 환경에 맞는 단어를 구사할 줄 알아야 한다.</li>
+				<li>JavaScript로 할 수 있는 일들<br>
+					<p>
+					웹페이지 스크립팅 - DOM<br>
+					서버 측 스크립팅 - node.js<br>
+					브라우저 확장기능<br>
+					-Google Chrome extensions<br>
+					-Opera extensions<br>
+					-Apple Safari 5 extensions<br>
+					-Apple Dashboard Widgets<br>
+					-Microsoft Gadgets<br>
+					-Yahoo! Widgets<br>
+					-Google Desktop Gadgets<br>
+					-Serence Klipfolio<br>
+					Adobe PDF<br>
+					Tools in the Adobe Creative Suite,<br>
+					-Photoshop<br>
+					-Illustrator<br>
+					-Dreamweaver<br>
+					-InDesign<br>
+					OpenOffice.org<br>
+					Unity 게임 엔진<br>
+				  Google Apps Script<br>
+					-Google Spreadsheets<br>
+					-Google Sites<br>
+					채팅 시스템<br>
+					-ChatZilla<br>
+					-XChat<br>
+					</p>
+				</li>
+				<li>
+					<b>JavaScript에 영향을 준 언어</b><br>
+					Java:기본적인 문법<br>
+					Scheme: 1급 함수(first-class-function) 함수의 인자와 반환값으로 함수를 사용<br>
+					Self: prototype 기반의 상속 개념.
+				</li>
+			</ol>
+			
+			<h2>
+				10.기타
+			</h2>
+			<ol>
+				<li>&lt;script>는 바디 맨 밑에 넣는다.</li>
+				<li>CSS에서는 background-color이지만 <br>
+					JavaScript에서는 backgroundColor(구문의 차이 주의)</li>
+				<li>" "안에 ' '를 넣으면 실행 오류. 반드시 ' '사용.</li>
+				<li><span class="js">document.querySelector('body').style.backgroundColor='black';
+					</span><br>해석: 이문서의 선택할 것이 무엇이니('body')에 style="background-color;black"
+				을 넣을거야.</li>
+				<li>토글(Toggle)</li>
+				<li>프로그래머의 수치: 데이터가 바뀌었다고 로직이 바뀌는 것.</li>
+				<li>파일로 나누어 정리<br>
+					<span class="js">&lt;script src = "color.js"&gt;&lt;/script&gt;</span></li>
+				<li>검색어 추천<br>
+					<ol>
+						<li>Web Page의 특정 Tag 삭제 or 자식 Tag 추가<br>
+							<strong>document or DOM(Document Object Model)</strong></li>
+						<li>Web Browser 자체<br>
+							<strong>window 객체(Ajax: cookie,offline web application)</strong></li>
+						<li>화상 통신 Web App<br>
+							<strong>WebRTC</strong></li>
+						<li>음성 인식<br>
+							<strong>speech(API)</strong></li>
+						<li>3차원 그래픽<br>
+							<strong>WebGL</strong></li>
+						<li>가상현실<br>
+							<strong>webVR</strong></li>
+					</ol></li>
+				<li>
+					윈도우 메모장으로 저장: 파일형식-모든파일, 인코딩-유니코드<br>
+					맥 textEdit으로 저장: Format-Make Rich Text, 파일명 뒤에 .html 확장자를 붙인다.
+				</li>
+				<li>
+					Ctrl+Shift+J(윈도우), Command+Alt+J(osx) 키를 누르면 콘솔 탭이 선택된 상태로 개발자 도구가 실행된다.
+				</li>
+			</ol>
     </div>
     </div>
   </body>

@@ -3,17 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="html.css">
+    <link rel="stylesheet" href="study.css">
   </head>
   <body>
     <h1>CSS</h1>
     <div id=grid>
-      <ol id=list>
-        <li><a href="html.html">html</a></li>
+      <div id=list>
+       <li><a href="html.html">html</a></li>
         <li><a href="css.html">css</a></li>
         <li><a href="javascript.html">javascript</a></li>
+				<li><a href="deeperjs.html">deeperjs</a></li>
+				<li><a href="node.js.html">node.js</a></li>
         <li><a href="site.html">site</a></li>
-      </ol>
+				<li><a href="web.html">web</a></li>
+				<li><a href="wish_list.html">wish list</a></li>
+      </div>
     <div id=contents>
     <h2>1.CSS의 개념</h2>
     <ol>
@@ -54,18 +58,392 @@
     </ol>
     <h2>4.CSS 선택자(seletor)</h2>
     <ol>
-      <li><strong>class="";(class seletor),id=";(id selector)</strong>
+			
+      <li>
+				<strong>class="";(class seletor),id=";(id selector)</strong>
         :id&gt;class&gt;tag(selector 계급,같은 계급일 때는 밑&gt;위)<br>class=&gt;.class<br/>
-        id =&gt;#id<br/>둘 다 <strong>HTML</strong>의 속성(attribute)이다.</li>
-      <li>클래스 속성의 값은 여러개가 들어갈 수 있고 띄어쓰기로 구분한다.</li>
-      <li>하나의 태그에는 여러개의 속성이 들어갈 수 있고, 여러개의 selector를 통해
+        id =&gt;#id<br/>둘 다 <strong>HTML</strong>의 속성(attribute)이다.
+			</li>
+			
+      <li>
+				클래스 속성의 값은 여러개가 들어갈 수 있고 띄어쓰기로 구분한다.
+			</li>
+			
+      <li>
+				하나의 태그에는 여러개의 속성이 들어갈 수 있고, 여러개의 selector를 통해
         <br>하나의 태그를 공동으로 제어할 수 있다.<br>
         ex)class="active saw"<br>
         .saw{<br>&nbsp color:red;<br>}<br>
-        .active{<br>&nbsp color:gray;<br>}</li>    
+        .active{<br>&nbsp color:gray;<br>}
+			</li>   
+			
+			<li>
+				<span class="css">#grid ol{<br>
+					}</span><br>
+				:gird라는 id를 가진 tag 밑에 있는 ol 태그.
+			</li>
+			
+			<li>
+				<span class="css">ul li{<br>
+				&nbsp color:red;<br>
+					}<br>
+				<br>
+				#lecture>li{<br>
+					&nbsp border:1px solid red;<br>
+					}</span><br>
+				<br>
+				<span class="css">ul,ol{<br>
+				&nbsp background-color:powderblue;<br>
+				}
+				</span>
+				ul과 ol을 동시에 선택.
+				#lecture 바로 밑에 있는 li만을 선택
+			</li>
+			
+			<li>
+				pseudo class selector(가상 클래스 선택자): 엘리먼트들의 상태에 따라서 클래스 선택자처럼 여러 엘리먼트를 선택할 수 있음.<br>
+				<span class="css">a:active{<br>
+				&nbsp color:green;<br>
+				}<br>
+				<br>
+				a:hover{<br>
+				&nbsp color:yellow;<br>
+				}<br>
+				<br>
+				a:visited{<br>
+				&nbsp color:red;<br>
+				}<br>
+				<br>
+				a:link{<br>
+				&nbsp color:black;<br>
+				}<br>
+					<br>
+				a:focus{<br>
+				&nbsp color:white;<br>
+				}<br>
+				<br>
+				input:focus{<br>
+				&nbsp background-color: black;<br>
+				&nbsp color:white;<br>
+				}<br>
+				<br>
+				:link - 방문한 적이 없는 링크, :visited - 방문한 적이 있는 링크, :hover - 마우스를 롤오버 했을때, 
+				:active - 마우스를 클릭했을 때, :focus - tab키를 누르거나 focus됬을 때 (이상 순서대로 지정하는게 좋음)<br>
+				visited의 경우 보안상의 이유로 아래와 같은 속성만 변경 가능.<br>
+				color, background-color, border-color, outline-color, The color parts of the fill and stroke properties
+				</span>
+			</li>
+			
+			<li>
+				여러가지 선택자들<br>
+				<br>
+				<ol>
+					<li><span class="css">*</span>: 웹페이지의 모든 선택자를 선택.</li>
+					<li><span class="css">ul *</span>: 모든 ul태그 밑의 태그들을 선택.</li>
+					<li><span class="css">plate+apple</span>: plate 옆에 인접한(위 아래) apple 태그들을 선택</li>
+					<li><span class="css">bento~pickle</span>: bento를 밑에 있는 모든 pickle 태그를 선택</li>
+					<li><span class="css">plate>apple</span>: plate의 직계 자식을 선택(plate 바로 밑에 있는 apple)</li>
+					<li><span class="css">plate orange:first-child</span>: plate밑에 있는 orange 중에 첫번째.
+					그냥 :first-child를 쓰면 모든 첫번째 태그를 선택</li>
+					<li><span class="css">plate :only-child</span>: 누군가의 자식인데 형제가 없음.</li>
+					<li><span class="css">.small:last-child</span>: 클래스가 small인 누군가의 자식들 중 마지막 태그.</li>
+					<li><span class="css">:nth-child(3)</span>: 누군가의 3번째 자식</li>
+					<li><span class="css">bento:nth-last-child(3)</span>: nth-child의 역순. 누군가의 밑에서 3번째 자식 중
+					bento태그</li>
+					<li><span class="css">apple:first-of-type</span>: 처음 등장하는 apple 태그</li>
+					<li><span class="css">plate:nth-of-type(even/odd/3)</span>:짝수/홀수에 등장하는 plate태그</li>
+					<li><span class="css">:nth-of-type(2n+3)</span>: 수열로 선택</li>
+					<li><span class="css">apple:only-of-type</span>: 모든 apple중 같은 타입의 형제가 없는 apple만 선택</li>
+					<li><span class="css">.small:last-of-type</span>: 모든 small클래스 중에 같은 타입의 형제 중 마지막.</li>
+					<li><span class="css">bento:empty</span>: 자식이 없이 비어있는 bento 태그</li>
+					<li><span class="css">:not(#fancy)/div:not(first-child)/:not(.big, .medium)</span>: id가 fancy가 아닌 
+					모든 태그/ 첫번째 자식이 아닌 모든 div 태그/ big이나 medium 클래스가 아닌 모든 태그.</li>
+					<li><span class="css">a[href]/[type]</span>: 모든 href속성을 가지고 있는 a태그/ 
+					모든 type속성을 가지고 있는 태그</li>
+					<li><span class="css">input[type="checkbox"]</span>: 모든 type속성의 값이 checkbox인 input태그</li>
+					<li><span class="css">.toy[category^="swim"]</span>: 모든 toy클래스 중 category값이 swim으로 
+					시작하는 태그</li>
+					<li><span class="css">img[src$=".jpg"]</span>: .jpg으로 끝나는 모든 img태그</li>
+					<li><span class="css">img[src*="/thumbnails/"]/[class*="heading"]
+						</span>: thumbnails폴더에서 가져오는 모든 img 태그/클래스명에 heading이 포함된 모든 태그</li>
+				</ol>
+			</li>
     </ol>
     <h2>5.박스 모델</h2>
-  </div>
+		<ol>
+			<li><strong>block level element</strong> vs <strong>inline element</strong><br>
+				<strong>display:block</strong>(화면 전체) ex) h1, div, p...<br>
+				<strong>display:inline</strong>(자신크기만큼) ex) a, span...<br>
+				<strong>display:none</strong>(안보임)</li>
+			<li>테두리 만들기<br>
+				<span class="css">a,h1{<br>
+				&nbsp border-width:5px;<br>
+				&nbsp border-color:red;<br>
+				&nbsp border-style:solid;<br>
+				&nbsp padding:20px; => 테두리와 글자간의 간격<br>
+				&nbsp margin:0px; => 테두리끼리의 간격<br>
+				&nbsp width:200px; => 테두리의 크기(폭)<br>
+					}<br>
+				=>border:5px red solid;</span>
+			</li>
+			<li>
+				<div class="container">
+					<div class="item boxmodel">box model</div>
+					<div class="item margin">margin</div>
+					<div class="item border">border</div>
+					<div class="item padding">padding</div>
+					<div class="item content">content</div>
+				</div>
+			</li>
+		</ol>
+		<h2>
+			6.Flexbox	
+		</h2>
+		<ol>
+			<li>container(parent) 와 item(child)</li>
+			<li>main axis 와 cross axis</li>
+			<li>container properties<br>
+				<span class="css">dispaly:flex;<br>
+				flex-direction:row/row-reverse/column/column-reverse;<br>
+				<span id="explan">(row:L to R/column:T to B)</span><br>
+				flex-wrap:nowrap/wrap/wrap-reverse;<br>
+				<span id="explan">(화면의 크기가 변할때 item의 크기를 유지시키고 다음줄로 넘어감)</span><br>
+				flex-flow:column nowrap;<br>
+				<span id="explan">(flex-direction+flex-wrap)</span><br>
+				justify-content:flex-start/flex-end/center/space-around/space-evenly/space-between;<br>
+				<span id="explan">(main axis를 기준으로/direction은 안변함)</span><br>
+				<span id="explan">(around:item주위를 두르는 공간/evenly:균등하게/between:좌우는 화면끝에)</span><br>
+				align-items:center/baseline;<br>
+				<span id="explan">(cross axis를 기준으로/ baseline:텍스트 라인을 맞추게)</span><br>
+				align-content:flex-start/flex-end/center/space-around/space-evenly/space-between;<br>
+				<span id="explan">(cross axis를 기준으로하는 justify-content라고 보면됨)</span><br>
+				</span></li>
+			<li>item properties<br>
+				<span class="css">order:0/1/2...;<br>
+				<span id="explan">(item 개개인의 순서 조정)</span><br>
+				flex-grow:0/1/2/3...;<br>
+				<span id="explan">(화면의 크기에 맞춰 숫자의 비율대로 늘어남)</span><br>
+				flex-shrink:0/1/2/3...;<br>
+				<span id="explan">(화면의 크기에 맞춰 숫자의 비율대로 줄어들음 *숫자가 클수록 더 작아짐)</span><br>
+				flex-basis:10%/20%/30%/auto;<br>
+				<span id="explan">(grow+shrink:늘어나든 줄어들든 이 비율 유지)</span><br>
+				align-self:center;<br>
+				<span id="explan">(container안에서 item하나만 align하고 싶을때)</span><br>
+				</span></li>
+		</ol>
+		<h2>
+			7.Position
+		</h2>
+		<ol>
+			<li>Position은 <b>"부모 태그 안에서의 위치"</b> 조정하는 속성</li>
+			<li>기본값-<b>position:static;</b></li>	
+			<li>position의 값이 static 일때 left,right,top,bottom속성은 사용X</li>
+			<li>position:relative;</li>
+			<li>position의 값이 relative 일때 left,right,top,bottom속성 사용가능<br>
+				<b>*자신의 원래 위치를 기준으로 움직임</b></li>
+			<li>position:absolute;</li>
+			<li>position의 값이 absolute 일때 left,right,top,bottom속성 사용가능<br>
+			공중부양하는 느낌으로 자신의 content 크기만큼의 크기를 가지고 다른 자식 태그를 무시한채 움직임.<br>
+				<b>*부모와 자신의 위치의 차를 값으로 정한다.ex)top:0;부모 태그의 맨위<br>
+					*단 부모 태그가 static일 경우에는 무시하고 그 위 태그로 간다.</b></li>
+			<li>position:fixed;</li>
+			<li>position 값이 fixed일때 left,right,top,bottom속성 사용가능<br>
+			공중부양하는 느낌으로 자신의 content 크기만큼의 크기를 가지고 다른 자식 태그를 무시한채 움직임.<br>
+			<b>*무조건 body 태그와 자신의 위치의 차를 값으로 정한다.<br>
+					*스크롤을 무시하고 화면상에서 그 위치에 항상 있다.</b>
+			</li>
+			<li><span class="css">
+				element{<br>
+				&nbsp position:static/relative/absolute/fixed;<br>
+				&nbsp left:0px;<br>
+				&nbsp right:0px;<br>
+				&nbsp top:0px;<br>
+				&nbsp bottom:0px;<br>
+				}
+			</span></li>
+		</ol>
+		<h2>
+			8.Grid	
+		</h2>
+		<ol>
+			<li>
+				<b>&lt;div>, &lt;span></b>: 무색 무취의 아무 의미 없는 디자인용 태그<br>
+				<b>&lt;div></b>:block level element<br>
+				<b>&lt;span></b>:inline element
+			</li>
+			
+			<li>
+				디자인용 태그를 부모 자식 태그로 자유롭게 응용 (id,class으로 구분)
+			</li>
+			
+			<li>
+				<span class="css">#grid{<br>
+				&nbsp border:5px solid pink;<br>
+				&nbsp display:grid;<br>
+				&nbsp grid-template-columns:150px 1fr;<br>
+				}<br>
+				</span>1fr:화면 크기에 맞춤.
+			</li>
+			
+			<li>
+				그리그 사용시 내용 태그들을 감싸는 부모 태그를 만든 후 부모 태그를 grid로 만든다.
+			</li>
+		</ol>
+			
+		<h2>
+			9.Responsive Web(반응형 웹/디자인)
+		</h2>
+			
+			<ol>
+				<li>
+					화면의 크기에 따라서 web page의 각 요소들이 반응해서 최적화된 외형으로 바뀌게 하는 것.
+				</li>
+				
+				<li>
+					web은 모든 시스템에서 동작하는 정보 시스템.<br>
+					=수많은 형태의 화면에서 동작 해야함.
+				</li>
+				
+				<li>
+					CSS를 통해 구현하는 핵심적인 개념, mediaquery(미디어쿼리)<br>
+					<b>dia query</b>: 어떠한 조건을 만족할 때만 CSS의 내용이 동작하게 하는 것.<br>
+					<span class="css">
+						@media(min-width:800px){<br>
+					&nbsp div{<br>
+					&nbsp &nbsp display:none;<br>
+					&nbsp }<br>
+						}<br></span>
+					@media() -가로 안에 세미콜론 금지;<br>
+					<span class="css">min-width:800px == (if)screen width > 800px<br>
+						max-width:800px == (if)screen width &lt; 800px</span><br><br>
+						
+					<span class="css">@media(max-width:800px){<br>
+					&nbsp #grid{<br>
+						&nbsp &nbsp display:block;</span> -#grid가 있는 태그 아래 모든 태그의 display 값을 block으로 변경해 columns
+						이여도 rows 처럼 밖에 안되게 수정<br>
+					<span class="css">nbsp }<br>
+					&nbsp #grid ol{<br>
+						&nbsp &nbsp border-right:none;<br>
+					&nbsp }<br>
+					&nbsp h1{<br>
+					&nbsp border-bottom:none;<br>
+					&nbsp }<br>
+						}</span>
+				</li>
+				<li>
+					*중복의 제거<br>
+					&lt;link><br>
+					&lt;link rel="stylesheet" href="style.css"><br>
+					rel = relationship: link에서 문서와의 관계를 말해줌. 사용자에게 혜택이 없지만 부라우저나 검색엔진에게 링크 관계에 대한 정보를 줌.<br>
+					href 속성의 추가 정보<br><br>
+					CSS 파일을 만들어서 모든 웹페이지와 연동시킨다.<br>
+					<br>
+					효과<br>
+					-CSS 파일에서만 수정해도 모든 웹페이지에서 수정된다.(폭발적)<br>
+					-각각 웹페이지의 CSS 코드를 비교할 필요가 없다.<br>
+					-CSS 파일의 내부적인 코딩의 원리를 몰라도 사용가능하다.<br>
+					<br>
+					네트워크적인 측면(트래픽)으로 보면, CSS를 HTML에 내장하는게 더 효율적이여보일 수 있지만 "캐싱"이라는 테크닉 때문에 그렇지 않다.<br>
+					<br>
+					"캐싱"(저장)<br>
+					:한번 파일을 다운로드 받았다면, 파일이 바뀌기 전까지는 웹브라우저는 우리의 컴퓨터에 저장해 놓았다가, 파일을 요청하면 저장된 결과를<br>
+					가져와서 속도를 높일 수 있고(네트워크 사용X), 사업자들은 돈을 덜 쓸 수 있는 효과 제공.<br>
+					<br>
+					따라서, 캐싱을 사용하면 훨씬 더 빠르게 웹페이지를 보여주면서, 네트워크의 트래픽(=사용료)를 훨씬 더 적게 낼 수 있다.<br>
+					<br>
+					결론: 가급적 CSS를 만들었다면 꺼내서 별도의 파일로 저장. 선택자와 속성이 제일 중요(2개의 뿌리)
+					
+				</li>
+			</ol>
+			
+		<h2>
+			10.속성	
+		</h2>
+			<ol>
+				<li>
+					font-size: 글꼴의 크기 지정 (px/em/rem)<br>
+					<b>rem</b>: 폰트 크기를 사용자가 지정할 수 있음.html태그(최고층 태그)의 폰트 크기에 따라서 상대적으로 크기가 결정됨. 
+					(사용자가 브라우저의 글꼴크기를 키웠을때 바뀜, 권장)<br>
+					<b>em</b>: 부모 태그의 영향을 받는 상대적인 크기. 파악하기가 어려움. (권장하지 않음)
+					<b>px</b>: 고정된 값으로 사용자가 브라우저의 글꼴크기를 바꿔도 바뀌지 않음(권장하지 않음)
+				</li>
+				<li>
+					color: color name, hexa(16진수), rgb<br>
+					color name : tomato, powderblue, cyan 등등<br>
+					RGB : red, green, blue 의 조합. - 255.255.255 ~ 0.0.0.0/ color:rgb(255,255,255);<br>
+					Hexaecimal colors : #FF0000, #00FF00 / color:#00FF00;
+					
+				</li>
+				
+				<li>
+					<b>text-align</b><br>
+					<span class="css">text-align: center/left/right/justify</span><br>
+					Lorem ipsum. justify= 좌우 균등하게 끝에 정렬.
+				</li>
+				
+				<li>
+					<b>font</b><br>
+					font-family: 서체(글꼴)를 지정.<br>
+					<span class="css">font-family: arial, verdana, "Helvetica Neue";/cursive/fantasy</span><br>
+					arial, verdana, "Helvetica Neue"중 순서대로 있는 글꼴이 적용됨.<br>
+					<span class="css">serif / sans-serif</span>: 알파벳 끝의 장식 유무를 결정. sans(부정의 의미)<br>
+					<span class="css">monospace</span>: 고정폭 (반대:가변폭)<br>
+					<span class="css">font-weight: bold</span>: 폰트 굵기<br>
+					<span class="css">line-height:1.2; /2;</span>: 줄간격(1.2가 기본값).px로 지정할시 폰트크기에 
+					상관없이 고정됨.<br>
+					<span class="css">font : bold 5rem/2 arial, verdana, "Helvetica Neue", serif;</span><br>
+					축약형: 순서가 중요함/ font: font-style font-variant font-weight <b>font-size</b>/line-height 
+					<b>font-family</b>|caption|icon|menu|message-box|small-caption|status-bar|initial|inherit;<br>
+					이 중에 <b>font-seze</b>와 <b>font-family</b>는 필수로 포함되어야 하는 정보.
+				</li>
+			</ol>
+		
+		<h2>
+			11.조화	
+		</h2>
+			
+		<ol>
+			<li>
+				상속: 부모 태그의 속성을 자식 태그가 물려받는 것.(생산성을 올림)<br>
+				Inheritance<br>
+				부모 태그의 속성을 지정한다음, 개별적으로 자식 태그들 중 다른 속성을 가져야하는 것들을 수정.<br>
+				속성 중에 상속이 되는 속성이 있고, 상속이 안되는 속성이 있다. site참조. inherited? yes/no
+			</li>	
+			
+			<li>
+				stylish
+			</li>
+		</ol>
+		<h2>
+			Tips
+		</h2>
+		
+		<ol>
+			<li>
+				/* 주석 */
+			</li>
+			
+			<li>
+				div.container>div.item.item${$}*10 + tab<br>
+				div태그 container클래스 그안에 div태그 item클래스의 item클래스(1번부터 번호) <br>
+				(1번부터번호) 를10번
+			</li>
+			
+			<li>
+				<strong>100vh</strong>: 부모 태그에 상관없이 보이는 화면의 100% <br>
+				그냥 100%일 경우 부모태그의 영역에서 100%
+			</li>
+			
+			<li>
+				caniuse.com이나 MDN사이트에서 새로운 속성들은 사용가능한 브라우저 확인
+			</li>
+			
+			<li>
+				lab,map,nthchild
+			</li>
+			
+		</ol>
+  	</div>
   </div>
   </body>
 </html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="study.css">
+  </head>
+  <body>
+    <h1>JavaScript</h1>
+    <div id=grid>
+      <ol id=list>
+        <li><a href="html.html">html</a></li>
+        <li><a href="css.html">css</a></li>
+        <li><a href="javascript.html">javascript</a></li>
+				<li><a href="deeperjs.html">deeperjs</a></li>
+				<li><a href="node.js.html">node.js</a></li>
+        <li><a href="site.html">site</a></li>
+				<li><a href="web.html">web</a></li>
+				<li><a href="wish_list.html">wish list</a></li>
+      </ol>
+    <div id=contents>
+			
+			<h2>
+				숫자와 문자
+			</h2>
+			<b>숫자의 표현</b><br>
+			큰따옴표나 작은 따옴표가 붙지 않은 숫자는 숫자.<br>
+			곱하기를 할 때는 <span class="js">*</span>: 에스터리스크, Asterisk(키보드 자판위의 숫자 8위)를 사용<br>
+			나누기를 할 때는 <span class="js">/</span> : 슬래쥐, Slash (키보드 자판상으로 오른쪽 Shift키 바로 왼쪽)을 사용
+			<br>
+			<span class="js">Math.pow(3,2);</span> : 3의 2승<br>
+			<span class="js">Math.round(10.6);</span> : 10.6을 반올림<br>
+			<span class="js">Math.ceil(10.2);</span> : 10.2를 올림<br>
+			<span class="js">Math.floor(10.6);</span> : 10.6을 내림<br>
+			<span class="js">Math.sqrt(9);</span> : 9의 제곱근<br>
+			<span class="js">Math.random();</span> : 0부터 1.0사이의 랜덤한 숫자<br>
+			<br>
+			<b>문자의 표현</b><br>
+			문자는 큰따옴표나 작은 따옴표 중의 하나로 감싸야 한다. 큰따옴표로 시작하면 큰 따옴표로, 작은은 작은으로 끝나야한다.<br>
+			숫자를 따옴표로 감싸면 문자가 된다<br>
+			<span class="js">alert(typeof"1")</span> : 결과 string. (typeof는 값의 데이터 형을 알려줌)<br>
+			만약 문자안에 따옴표를 넣고 싶다면, <span class="js">\'</span>를 쓰면 된다.<br>
+			\를 ' 앞에 위치시키면  '를 단순한 문자로 해석하도록 강제 할 수 있다. - 이스케이프(escape)기법<br>
+			여러줄을 표시하려면 <span class="js">\n</span>을 쓰면 줄바꿈을 한다.<br>
+			문자와 문자를 더할 때는 <span class="js">"coding"+" everybody"</span> 이렇게 하고,<br>
+			문자의 길이를 구할 때는 문자 뒤에 .length를 붙인다. <span class="js">"coding everybody".length</span>
+			
+			<h2>
+				변수
+			</h2>
+			
+			<ol>
+				<li><span class="js">var a='coding', b='everybody';</span> : var을 하나만 쓰고 여러개의 변수 만들기</li>
+			</ol>
+			
+			<h2>
+				주석
+			</h2>
+			
+			<ol>
+				<li>// (해당 줄만 주석 처리)</li>
+				<li>/*  */ (여러 줄 주석 처리)</li>
+			</ol>
+			
+			<h2>
+				줄바꿈과 여백
+			</h2>
+			
+			<ol>
+				<li><span class="js">;</span> : 명령이 끝났음을 명시적으로 나타냄 (줄이 바뀌어도 명령이 끝남)<br>
+				한 줄에 여러 다른 코드가 있을 경우 세미콜론은 필수. 그냥 쓰는게 좋은 습관. </li>
+			</ol>
+			
+			<h2>
+				비교
+			</h2>
+			
+			<ol>
+				<li><span class="js">==</span>와<span class="js">===</span> : ===는 데이터형이 같은 경우에만 true<br>
+				<span class="js">alert(null == undefined);       //true<br>
+					alert(null === undefined);      //false<br>
+					alert(true == 1);               //true<br>
+					alert(true === 1);              //false<br>
+					alert(true == '1');             //true<br>
+					alert(true === '1');            //false<br>
+					alert(0 === -0);                //true<br>
+					alert(NaN === NaN);             //false<br></span>
+				null과 undefined는 값이 없다는 의미의 데이터 형. <br>
+				단, null은 프로그래머가 값이 없게 의도적으로 지정함, undefined는 그냥 값이 없는 상태.<br>
+				NaN은 0/0과 같은 연산의 결과로 만들어지는 특수한 데이터형으로 계산할 수 없다는 뜻이다.
+				</li>
+				
+				<li>
+					<span class="js">!=</span>와<span class="js">!==</span>: !==은 정확하게 같지는 않다는 뜻.
+				</li>
+				
+				<li>
+					그 외 <span class="js">> &lt; >= &lt;=</span>
+				</li>
+			</ol>
+			
+			<h2>
+				조건문
+			</h2>
+			<ol>
+				<li>
+				<span class="js">if > else if > else</span>: 순차적으로 판단해서 실행하고 else는 생략 가능
+				</li>
+				<li>
+					<span class="js">alert(prompt('당신의 나이는?');*2);</span> : 안쪽에 있는 prompt가 먼저 실행되어 <br>
+					사용자가 값을 입력하면 그 값에 2를 곱한 값을 alert로 다시 알림.<br>
+					<span class="js">id = prompt('아이디를 입력해주세요.')<br>
+						if(id=='egoing'){<br>
+						&nbsp alert('아이디가 일치 합니다.')<br>
+						} else {<br>
+						&nbsp alert('아이디가 일치하지 않습니다.')<br>
+						}</span>
+				</li>
+				
+				<li>
+					논리연산자: &&(ampersend) - and 연산자 / ||(fife) - or 연산자<br>
+					<span class="js">id = prompt('아이디를 입력.');<br>
+					password = prompt('비밀번호 입력');<br>
+					if((id==='egoing' || id==='k8805' || id==='sorialgi') && password==='111111'){<br>
+					&nbsp alert('인증 완료');<br>
+					} else {<br>
+					&nbsp alert('인증 실패');<br>
+						}</span>
+				</li>
+				<li>
+					<span class="js">!</span> : 부정의 의미로, Boolean 값을 역전시킴.(not 연산자)
+				</li>
+				<li>
+					조건문에 사용될 수 있는 데이터 형이 꼭 boolean만 있는 건 아니다.<br>
+					<span class="js">if(1)</span> : 1은 true<br>
+					<span class="js">if(0)</span> : 0은 false<br>
+					<span class="js">if(!'')</span> : 빈 문자열은 false<br>
+					<span class="js">if(!undefined)</span> : undefined는 false<br>
+					<span class="js">if(!a)</span> : 값이 할당되지 않은 변수는 false<br>
+					<span class="js">if(!null)</span> : null은 false<br>
+					<span class="js">if(!NaN)</span> : NaN은 false
+				</li>
+			</ol>
+		
+			<h2>
+				반복문
+			</h2>
+			
+			<ol>
+				<li><span class="js">var i = 0;<br>
+					while(i&lt;10){<br>
+					&nbsp document.write('coding everybody &lt;br />');<br>
+					&nbsp i++<br>
+					}</span></li>
+				
+				<li>for<br>
+				<span class="js">for(var i = 0; i&lt;10; i++){<br>
+					&nbsp document.write('coding everybody'+i+'&lt;br />');<br>
+					}</span><br>
+				1) 초기화, 반복조건, 반복이 될때마다 실행되는 코드<br>
+				2) 가로 안에 맨 끝에는 ;세미콜론을 사용하면 안된다.</li>
+				
+			</ol>
+			
+			<h2>
+			  Tip
+			</h2>
+			
+			<ol>
+				<li>세미콜론(;)은 하나의 구문이 끝났음을 명시적으로 나타내는 기호다. 다음처럼 한줄에 여러구문을 사용하고 싶을 때 세미콜론이 
+					유용하다. a = 1; alert(a+1); JavaScript에서는 세미콜론을 생략할 수 있는데, 이 경우 줄바꿈을 명령의 끝으로 
+					간주하게 된다.</li>
+				<li>
+					\ + \ = 코드 상에서 줄바꿈하기
+				</li>
+			</ol>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
