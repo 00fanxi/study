@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="study.css">
   </head>
   <body>
-    <h1>JavaScript</h1>
+    <h1>Deeper JavaScript</h1>
     <div id=grid>
       <ol id=list>
         <li><a href="html.html">html</a></li>
@@ -160,6 +160,62 @@
 				1) 초기화, 반복조건, 반복이 될때마다 실행되는 코드<br>
 				2) 가로 안에 맨 끝에는 ;세미콜론을 사용하면 안된다.</li>
 				
+			</ol>
+			
+			<h2>
+				객체(object)
+			</h2>
+			
+			<ol>
+				<li>
+					객체는 순서가 없는 정보를 저장하기에 최적화됨. 숫자가 아닌 이름으로 식별자를 줌.
+				</li>
+				<li>
+					객체의 반복문<br>
+					var roles = {<br>
+						'programmer':'egoing',<br>
+						'designer' : 'k8805',<br>
+						'manager' : 'hoya'<br>
+					}<br>
+					console.log(roles.designer); //k8805<br>
+					console.log(roles['designer']); //k8805<br>
+							<br>
+					for(var n in roles){<br>
+						console.log('object => ', n, 'value => ', roles[n]);<br>
+					}<br>
+					for(var n in roles) n은 키 값의 위치, roles는 객체의 이름
+				</li>
+				<li>
+					객체지향(object oriented programming)<br>
+					var f = function(){<br>
+						console.log(1+1);<br>
+						console.log(1+2);<br>
+					}<br>
+					var a = [f];<br>
+					a[0]();<br>
+						<br>
+					var o = {<br>
+						func:f<br>
+					}<br>
+					o.func();<br>
+				</li>
+				
+				<li>
+					데이터와 값을 담는 그릇으로서 객체<br>
+					var q = {<br>
+						v1:'v1',<br>
+						v2:'v2',<br>
+						f1:function (){<br>
+							console.log(this.v1);<br>
+						},<br>
+						f2:function(){<br>
+							console.log(this.v2);<br>
+						}<br>
+					}<br><br>
+
+					q.f1();<br>
+					q.f2();<br>
+				</li>
 			</ol>
 			
 			<h2>
