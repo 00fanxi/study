@@ -1,0 +1,26 @@
+MongoDB + Node.js(apple)
+
+
+npm install mongodb (몽고 db 라이브러리)
+
+안되면 npm uninstall mongodb로 지웠다가 npm install mongodb@3.6.4
+
+server.js 상단에 
+
+const MongoClient = require('mongodb').MongoClient; 
+MongoClient.connect('url' , function(error,client){
+
+  app.listen(8080, function () {
+      console.log('listening on 8080')
+  });
+
+})
+
+입력
+
+nodemon
+
+MongoDB Atlas : DB 512mb 무료 호스팅
+
+
+
