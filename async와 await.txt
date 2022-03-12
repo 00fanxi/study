@@ -1,0 +1,93 @@
+async/await 기초
+
+async/await 코드는 두가지 부분으로 나눠져 있다.
+
+1. 비동기 키워드
+
+먼저 비동기 함수를 async 함수로 만들기 위하여 function 앞에 async 키워드를 추가한다.
+async function() 은 await 키워드가 비동기 코드를 호출할 수 있게 해주는 함수이다.
+
+async function hello(){ return "Hello" };
+hello( );
+
+Promise를 반환한다. 이것이 async 기능의 특징 중 하나이다. 
+이 키워드를 사용하면 반환받는 값은 Promise가 된다.
+
+Promise {
+  'Hello',
+  [Symbol(async_id_symbol)]: 28,
+  [Symbol(trigger_async_id_symbol)]: 5,
+  [Symbol(destroyed)]: { destroyed: false }
+}
+
+async function expression을 사용하여 아래와 같이 만들 수도 있다.
+
+let hello = async function(){ return "Hello"};
+
+let hello = async () => {return "Hello"};
+
+기본적으로 두가지는 모두 같다.
+
+실제로는 fulfil promise가 반환되기 때문에 반환된 값을 사용하기 위해선 .then() 블럭을 사용해야 한다.
+
+ hello().then(value) => console.log(value)
+
+짧게 표현하면,
+
+hello().then(console.log)
+
+정리하면 async 를 함수와 같이 사용하면 결과를 직접 반환하는게 아니라 Promise를 반환하게 한다.
+또한 동기식 함수는 await 사용을 위한 지원과 함께 실행되는 잠재적인 오버헤드를 피할 수 있다.
+함수가 async 라고 선언될 때 필요한 핸들링만 추가하면 JavaScript 엔진이 우리가 만든 프로그램을 최적화 할 수 있다.
+
+2. 비동기 키워드
+
+비동기 함수를 await키워드와 함께 쓰면 그 장점이 확실히 보인다. 
+이것은 어떠한 Promise 기반 함수 앞에 놓을 수 있다. 
+그리고 우리의 코드의 Promise가 fulfil될 때 까지 잠시 중단하고, 결과를 반환합니다. 
+그리고 실행을 기다리는 다른 코드들을 중지시키지 않고 그대로 실행되게 합니다.
+
+await 키워드는 웹 API를 포함하여 Promise를 반환하는 함수를 호출할 때 사용할 수 있습니다.
+
+여기 간단한 예가 있습니다. :
+
+async function hello() {
+  return greeting = await Promise.resolve("Hello");
+};
+
+hello().then(alert);
+
+
+
+3. async/await와 함께 다시 쓰는 promise code
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
